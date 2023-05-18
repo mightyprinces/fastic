@@ -1,23 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fastic</title>
-</head>
-<body>
-    <main>
-        <section class="fasting-status">
-            <div class="fasting-status__progress"></div>
-            <div class="fasting-status__icon"></div>
-            <div class="fasting-status__text">Fasting</div>
-        </section>
 
-        <section class="timer">
-            <div class="timer">00:00:01</div>
-            
-        </section>
-    </main>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="./js/script.js" defer></script>
+  <title>Fastic</title>
+</head>
+
+<body>
+  <header class="header container">
+    <div class="stat-counter stat-counter__days">
+      <span class="stat-counter__icon material-icons">local_fire_department</span>
+      <div class="stat-counter__value">20</div>
+    </div>
+    <div class="stat-counter stat-counter__hours">
+      <span class="stat-counter__icon material-icons">schedule</span>
+      <div class="stat-counter__value">200h</div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <h1>Fasting Window</h1>
+      <div class="fast-plan">
+        <div class="fast-plan__title">My fast plan</div>
+        <div class="fast-plan__plan">16:8</div>
+        <button class="button--icon">
+          <span class="material-icons">edit</span>
+        </button>
+      </div>
+      <div class="fasting-status">
+        <div class="fasting-status__progress">
+          <div class="progress-ring progress-ring__back">
+          </div>
+          <div class="progress-ring progress-ring__front">
+            <!-- <svg class="progress-ring" width="250" height="250">
+              <circle class="progress-ring__circle" />
+            </svg> -->
+          </div>
+        </div>
+        <!-- <div class="fasting-status__icon material-icons">opacity</div> -->
+        <div class="timer">
+          <div class="timer__text timer__text--title">Remaining</div>
+          <div class="timer__counter">14:00:30</div>
+          <div class="timer__text">Fasting for 1h 59m</div>
+        </div>
+      </div>
+      <button class="button button--primary button--start-end">End fasting</button>
+
+      <div class="basic-block actual-fast-time actual-fast-time--fasting-window">
+        <div class="actual-fast-time__item">
+          <div class="actual-fast-time__title">Start fast</div>
+          <div class="actual-fast-time__time-section">
+            <div class="actual-fast-time__time">18:41</div>
+            <button class="button--icon">
+              <span class="material-icons">edit</span>
+            </button>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="actual-fast-time__item">
+          <div class="actual-fast-time__title">End fast</div>
+          <div class="actual-fast-time__time-section">
+            <div class="actual-fast-time__time">10:41</div>
+            <button class="button--icon hidden">
+              <span class="material-icons">edit</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="fasting-progress">
+        <h2>Fasting progress</h2>
+        <div class="basic-block weekdays">
+          <div class="weekdays__nav">
+            <button class="arrow arrow__left material-icons">arrow_back_ios</button>
+            <div class="week-dates">8 - 14 May 2023</div>
+            <button class="arrow arrow__right material-icons">arrow_forward_ios</button>
+          </div>
+          <div class="weekdays__scheme">
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Mon</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">15h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Tue</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">21h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Wed</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">15h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Thu</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">15h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Fri</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">11h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Sat</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">12h</div>
+            </div>
+            <div class="weekday-item">
+              <div class="weekday-item__weekday">Sun</div>
+              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__hours">14h</div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
 </body>
+
 </html>
