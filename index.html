@@ -33,21 +33,44 @@
       <div class="fast-plan">
         <div class="fast-plan__title">My fast plan</div>
         <div class="fast-plan__plan">16:8</div>
-        <button class="button--icon">
+        <a href="./fast-plan.html" class="button--icon">
           <span class="material-icons">edit</span>
-        </button>
+        </a>
       </div>
       <div class="fasting-status">
         <div class="fasting-status__progress">
           <div class="progress-ring progress-ring__back">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
+              <defs>
+                 <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                 </linearGradient>
+              </defs>
+              <circle cx="125" cy="125" r="113" stroke-linecap="round" />
+            </svg>
           </div>
           <div class="progress-ring progress-ring__front">
-            <!-- <svg class="progress-ring" width="250" height="250">
-              <circle class="progress-ring__circle" />
-            </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="250px" height="250px">
+              <defs>
+                 <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                 </linearGradient>
+              </defs>
+              <circle cx="125" cy="125" r="113" stroke-linecap="round" />
+            </svg>
           </div>
         </div>
-        <!-- <div class="fasting-status__icon material-icons">opacity</div> -->
+
+        <div class="fasting-status__icons">
+          <div class="fasting-status__icon material-icons status__sugar-rises fasting-status--active">water_drop</div>
+          <div class="fasting-status__icon material-icons status__sugar-drops fasting-status--active">opacity</div>
+          <div class="fasting-status__icon material-icons status__sugar-settles-down">opacity</div>
+          <div class="fasting-status__icon material-icons status__fat-burning">local_fire_department</div>
+          <div class="fasting-status__icon material-icons status__ketosis">bolt</div>
+          <div class="fasting-status__icon material-icons status__autophagy">hotel_class</div>
+        </div>
         <div class="timer">
           <div class="timer__text timer__text--title">Remaining</div>
           <div class="timer__counter">14:00:30</div>
@@ -56,7 +79,7 @@
       </div>
       <button class="button button--primary button--start-end">End fasting</button>
 
-      <div class="basic-block actual-fast-time actual-fast-time--fasting-window">
+      <div class="block-basic actual-fast-time actual-fast-time--fasting-window">
         <div class="actual-fast-time__item">
           <div class="actual-fast-time__title">Start fast</div>
           <div class="actual-fast-time__time-section">
@@ -81,54 +104,92 @@
 
       <div class="fasting-progress">
         <h2>Fasting progress</h2>
-        <div class="basic-block weekdays">
+        <div class="block-basic weekdays">
           <div class="weekdays__nav">
             <button class="arrow arrow__left material-icons">arrow_back_ios</button>
             <div class="week-dates">8 - 14 May 2023</div>
             <button class="arrow arrow__right material-icons">arrow_forward_ios</button>
           </div>
           <div class="weekdays__scheme">
-            <div class="weekday-item">
+            <div class="weekday-item weekday-item--done">
               <div class="weekday-item__weekday">Mon</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">15h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Tue</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">21h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Wed</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">15h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Thu</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">15h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Fri</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">11h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Sat</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">12h</div>
             </div>
             <div class="weekday-item">
               <div class="weekday-item__weekday">Sun</div>
-              <div class="weekday-item__progress"></div>
+              <div class="weekday-item__progress-shape">
+                <div class="weekday-item__progress-shape weekday-item__progress--empty"></div>
+                <div class="weekday-item__progress-shape weekday-item__progress--actual">
+                  <span class="weekday-item__icon material-icons">local_fire_department</span>
+                </div>
+              </div>
               <div class="weekday-item__hours">14h</div>
             </div>
           </div>
         </div>
-        </div>
+
       </div>
 
-
+      <div class="temporary-settings">
+        <button class="btn-up">↑</button>
+        <button class="btn-down">↓</button>
+      </div>
     </div>
   </main>
 </body>
